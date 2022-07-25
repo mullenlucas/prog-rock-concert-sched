@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgb(56, 56, 56);
+  padding: 0 15%;
+  align-items: center;
+  max-height: 4vh;
+}
+
+header a {
+  padding: 0 1vw;
+  text-decoration: none;
+}
+
+header a p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+.header-icon {
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15%;
+}
+
+.prr-logo {
+  padding: 1% 0;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-items ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-items ul li {
+  padding: 0 2%;
+}
+
+.nav-items a {
+  margin: 0 24%;
+}
