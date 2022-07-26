@@ -4,7 +4,7 @@ header {
   display: flex;
   justify-content: flex-end;
   background-color: rgb(56, 56, 56);
-  padding: 0 15%;
+  padding: 0 10%;
   align-items: center;
   max-height: 4vh;
 }
@@ -25,9 +25,9 @@ header a p {
 
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 0 15%;
+  box-shadow: 14px;
 }
 
 .prr-logo {
@@ -36,7 +36,7 @@ nav {
 
 .nav-items {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-evenly; */
 }
 
 .nav-items ul {
@@ -44,13 +44,13 @@ nav {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-between;
+
 }
 
 .nav-items ul li {
-  padding: 0 2%;
+  padding-right: 4%;
 }
 
-.nav-items a {
-  margin: 0 24%;
+.nav-items ul li a {
+  white-space: nowrap;
 }
