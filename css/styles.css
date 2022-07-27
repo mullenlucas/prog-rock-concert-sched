@@ -1,9 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('http://fonts.cdnfonts.com/css/cocogoose');
+
+:root {
+  --color-dark: #272a31;
+  --color-red: #ec5242;
+  --color-gray: #d3d3d3;
+  --font-coco: 'COCOGOOSE', sans-serif;
+  --font-lato: 'Lato', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display:flex;
+  flex-direction: column;
+}
 
 header {
   display: flex;
   justify-content: flex-end;
-  background-color: rgb(56, 56, 56);
+  background-color: var(--color-dark);
   padding: 0 10%;
   align-items: center;
   max-height: 4vh;
@@ -15,7 +33,7 @@ header a {
 }
 
 header a p {
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-lato);
   font-weight: 300;
 }
 
@@ -27,7 +45,20 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 14px;
+  box-shadow: 0 0 4vh 0 var(--color-gray);
+  background-color: #fff;
+}
+
+.hamb-icons {
+  display: none;
+}
+
+#hamburgerIcon {
+  display: none;
+}
+
+#closeIcon {
+  display: none;
 }
 
 .prr-logo {
@@ -36,7 +67,6 @@ nav {
 
 .nav-items {
   display: flex;
-  /* justify-content: space-evenly; */
 }
 
 .nav-items ul {
@@ -44,13 +74,129 @@ nav {
   margin: 0;
   padding: 0;
   display: flex;
-
+  font-family: var(--font-lato);
+  font-weight: 300;
 }
 
 .nav-items ul li {
-  padding-right: 4%;
+  padding-right: 2%;
+  text-decoration: none;
 }
 
 .nav-items ul li a {
   white-space: nowrap;
+}
+
+.right {
+  display: none;
+}
+
+.headline {
+  background-image: url('/imgs/woodstock.jpg');
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  background-color: rgba(241, 241, 241, 0.9);
+  background-blend-mode: soft-light;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 100%;
+  margin-top: 0.5%;
+}
+
+.headline-titles {
+  color: var(--color-red)
+}
+
+.headline-titles h3, .headline-footer h4, .headline-box p {
+  font-family: var(--font-lato);
+}
+
+.headline-titles h1, .headline-footer h2 {
+  font-family: var(--font-coco);
+}
+
+.container-title h2 {
+  font-family: var(--font-lato);
+  text-align: center;
+}
+
+.red-line {
+  border-top: 3px solid var(--color-red);
+  height: 20px;
+  width: 60px;
+  margin: auto;
+}
+
+.headline-box p {
+  background-color: var(--color-four);
+  border: 3px solid #fff;
+  padding: 1rem;
+  line-height: 1.5rem;
+}
+
+.schedule-container {
+  background-color: var(--color-dark);
+  background-image: url("/imgs/diag_pattern.png");
+  align-items: center;
+}
+
+.schedule-container h2 {
+  color: #fff;
+  padding-top: 3%;
+}
+
+@media (min-width: 768px) {
+
+  .headline-titles, .headline-box, .headline-footer {
+    padding: 0 12%;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  header {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hamb-icons {
+    display: block;
+    margin-left: 2%;
+  }
+
+  #hamburgerIcon {
+    display: block;
+  }
+
+  .prr-logo {
+    justify-items: center;
+    margin-left: -2%;
+  }
+
+  .nav-items {
+    display: none;
+  }
+
+  .right {
+    display: block;
+  }
+
+  .headline-titles {
+    padding: 0 6%;
+  }
+
+  .headline-box {
+    padding: 0 4%;
+  }
+
+  .headline-footer {
+    padding: 0 6%;
+  }
 }
