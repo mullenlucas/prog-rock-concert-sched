@@ -51,6 +51,7 @@ nav {
 
 .hamb-icons {
   display: none;
+  z-index: 97;
 }
 
 #hamburgerIcon {
@@ -59,14 +60,13 @@ nav {
 
 #closeIcon {
   display: none;
+  color: var(--color-gray);
+  position:fixed;
+  z-index:100;
 }
 
 .prr-logo {
   padding: 1% 0;
-}
-
-.nav-items {
-  display: flex;
 }
 
 .nav-items ul {
@@ -75,16 +75,40 @@ nav {
   padding: 0;
   display: flex;
   font-family: var(--font-lato);
-  font-weight: 300;
+  gap: 4vw;
 }
 
 .nav-items ul li {
   padding-right: 2%;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .nav-items ul li a {
   white-space: nowrap;
+  text-decoration: none;
+  color: var(--color-dark)
+}
+
+#about-link, #buy-link {
+  color: var(--color-red)
+}
+
+#buy-link {
+  border-style: solid;
+  border-width: 4px;
+  padding: 12px;
+}
+
+.buy-shched-txt {
+  margin: 6%
+}
+
+#sched-buy {
+  text-decoration: none;
+  color: var(--color-gray);
+  font-family: var(--font-lato);
+  text-decoration: underline;
 }
 
 .right {
@@ -94,7 +118,6 @@ nav {
 .headline {
   background-image: url('/imgs/woodstock.jpg');
   background-repeat: no-repeat;
-  /* background-size: cover; */
   background-color: rgba(241, 241, 241, 0.9);
   background-blend-mode: soft-light;
   background-position: center;
@@ -109,7 +132,7 @@ nav {
   color: var(--color-red)
 }
 
-.headline-titles h3, .headline-footer h4, .headline-box p {
+h2, h3, h4, h5, p {
   font-family: var(--font-lato);
 }
 
@@ -139,13 +162,122 @@ nav {
 .schedule-container {
   background-color: var(--color-dark);
   background-image: url("/imgs/diag_pattern.png");
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-.schedule-container h2 {
+.schedule-container h2, .sponsors-container h2 {
   color: #fff;
   padding-top: 3%;
 }
+
+.schedule-container a {
+  text-align: center;
+}
+
+.sched-cards {
+  display: flex;
+  margin: 0 24px;
+  align-items: center;
+}
+
+.inner-card {
+  display: flex;
+  background-color: rgba(158, 158, 158, 0.12);
+  align-items: center;
+  padding: 12px;
+  height: 64vh;
+}
+
+.inner-card:hover {
+  border-style: solid;
+  border-color: var(--color-gray);
+  border-width: 2px;
+}
+
+.inner-card img {
+  max-width: 64px;
+  max-height: 64px;
+}
+
+.inner-card h3 {
+  color: var(--color-red)
+}
+
+.inner-card p {
+  color: rgb(226, 226, 226);
+}
+
+.artists-card-container {
+  display: grid;
+  grid-column-gap: 2px;
+  grid-row-gap: 12px;
+  margin-bottom: 2%;
+}
+
+.artists-card {
+  display: flex;
+  flex-direction: row;
+}
+
+.artists-card img {
+  max-width: 192px;
+  max-height: 192px;
+}
+
+.artists-txt {
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px;
+}
+
+.artists-txt h2, .artists-txt h3, .artists-txt p, .soft-line {
+  margin: 0;
+  padding-top: 4px;
+}
+
+.artists-txt h3 {
+  color: var(--color-red)
+}
+
+.soft-line {
+  border-top: 2px solid var(--color-dark);
+  width: 46px;
+  margin-top: 6px;
+}
+
+.sponsors-container {
+  background-color: var(--color-dark);
+  padding-bottom: 2%;
+}
+
+.sponsors-imgs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.sponsors-imgs img {
+  max-width: 240px;
+  max-height: 64px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6%;
+  margin-top: 6vh;
+  padding: 0 6%;
+}
+
+.footer-txt p {
+  font-size: 12px;
+}
+
 
 @media (min-width: 768px) {
 
@@ -153,6 +285,25 @@ nav {
     padding: 0 12%;
   }
 
+  .sched-cards {
+    flex-direction: row;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .inner-card {
+    flex-direction: column;
+  }
+
+  .inner-card p {
+    max-width: 18vw;
+    text-align: center;
+  }
+
+  .artists-card-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 767px) {
@@ -184,6 +335,31 @@ nav {
     display: none;
   }
 
+  .nav-items.active {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin: 0;
+  }
+
+  .ul-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    padding-top: 15% !important;
+    justify-content: flex-start;
+    background-color: rgba(39, 42, 49, 0.9);
+    width: 100%;
+  }
+
+  .nav-items ul li a {
+    white-space: nowrap;
+    text-decoration: none;
+    color: var(--color-gray)
+  }
+
   .right {
     display: block;
   }
@@ -198,5 +374,28 @@ nav {
 
   .headline-footer {
     padding: 0 6%;
+  }
+
+  .sched-cards {
+    flex-direction: column;
+    row-gap: 12px;
+    align-items: center;
+    margin: 0 24px;
+  }
+
+  .inner-card {
+    background-color: rgba(158, 158, 158, 0.12);
+    padding: 1.5rem;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .artists-card-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  .footer-txt p {
+    display: none;
   }
 }

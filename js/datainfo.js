@@ -1,43 +1,43 @@
-export const schedule = [
+export const dfschedule = [
   {
     id: "sch1",
     icon: "./imgs/headphone-icon.png",
     title: "Music",
-    text: ""
+    text: "Sum"
   },
   {
     id: "sch2",
     icon: "./imgs/artist-icon.png",
     title: "Artists",
-    text: ""
+    text: "txt"
   },
   {
     id: "sch3",
     icon: "./imgs/camping-icon.png",
     title: "Camping",
-    text: ""
+    text: "2"
   },
   {
     id: "sch4",
     icon: "./imgs/event-icon.png",
     title: "Events",
-    text: ""
+    text: "try"
   },
   {
     id: "sch5",
     icon: "./imgs/merch-icon.png",
     title: "Merch",
-    text: ""
+    text: "rhis"
   }
 ]
 
-export const artists = [
+export const dfartists = [
   {
     id: "ar1",
     img: "./imgs/pinkfloyd-img.jpg",
     bandName: "Pink Floyd",
     style: "Progressive psychedelic rock",
-    desc: "Fewer bands are as iconic and as legendary as Pink Floyd. From early psychedelic experimentations in the late 60s, to the emblematic Dark Side of the Moon album, across The Wall to more earthly compositions, this band remains to this day one of the most succesful and diverse bands in rock history",
+    desc: "From early psychedelic experimentations in the late 60s, to the emblematic Dark Side of the Moon album, across The Wall to more earthly compositions, this band remains to this day one of the most succesful and diverse bands in rock history",
   },
   {
     id: "ar2",
@@ -48,7 +48,7 @@ export const artists = [
   },
   {
     id: "ar3",
-    img: "./imgs/genesis-img.jfif",
+    img: "./imgs/genesis-img.jpg",
     bandName: "Genesis",
     style: "Progressive Theatrical rock",
     desc: "Before Phil Collins made it a pop-ish modern rock band, Genesis has is roots in progressive rock by the leading hand of Peter Gabriel, an extravagant performer who made music with theatrical themes",
