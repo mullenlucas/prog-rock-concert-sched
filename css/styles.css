@@ -14,8 +14,20 @@ html {
 }
 
 body {
-  display:flex;
+  display: flex;
   flex-direction: column;
+}
+
+h2,
+h3,
+h4,
+h5,
+p {
+  font-family: var(--font-lato);
+}
+
+h1 {
+  font-size: 46px;
 }
 
 header {
@@ -61,12 +73,22 @@ nav {
 #closeIcon {
   display: none;
   color: var(--color-gray);
-  position:fixed;
-  z-index:100;
+  position: fixed;
+  z-index: 100;
 }
 
 .prr-logo {
   padding: 1% 0;
+}
+
+.headline-footer a {
+  text-decoration: none;
+  font-family: var(--font-lato);
+  font-weight: bold;
+}
+
+.schedule-container a {
+  text-align: center;
 }
 
 .nav-items ul {
@@ -87,11 +109,12 @@ nav {
 .nav-items ul li a {
   white-space: nowrap;
   text-decoration: none;
-  color: var(--color-dark)
+  color: var(--color-dark);
 }
 
-#about-link, #buy-link {
-  color: var(--color-red)
+#about-link,
+#buy-link {
+  color: var(--color-red);
 }
 
 #buy-link {
@@ -101,11 +124,10 @@ nav {
 }
 
 .buy-shched-txt {
-  margin: 6%
+  margin: 6%;
 }
 
 #sched-buy {
-  text-decoration: none;
   color: var(--color-gray);
   font-family: var(--font-lato);
   text-decoration: underline;
@@ -129,29 +151,13 @@ nav {
 }
 
 .headline-titles {
-  color: var(--color-red)
-}
-
-h2, h3, h4, h5, p {
-  font-family: var(--font-lato);
-}
-
-h1 {
-  font-size: 46px;
-}
-
-.headline-titles h1, .headline-footer h2 {
-  font-family: var(--font-coco);
-}
-
-.headline-titles {
+  color: var(--color-red);
   text-shadow: 2px 2px var(--color-dark);
 }
 
-.headline-footer a {
-  text-decoration: none;
-  font-family: var(--font-lato);
-  font-weight: bold;
+.headline-titles h1,
+.headline-footer h2 {
+  font-family: var(--font-coco);
 }
 
 .container-title h2 {
@@ -183,13 +189,10 @@ h1 {
   justify-content: center;
 }
 
-.schedule-container h2, .sponsors-container h2 {
+.schedule-container h2,
+.sponsors-container h2 {
   color: #fff;
   padding-top: 3%;
-}
-
-.schedule-container a {
-  text-align: center;
 }
 
 .sched-cards {
@@ -247,13 +250,16 @@ h1 {
   padding: 0 12px;
 }
 
-.artists-txt h2, .artists-txt h3, .artists-txt p, .soft-line {
+.artists-txt h2,
+.artists-txt h3,
+.artists-txt p,
+.soft-line {
   margin: 0;
   padding-top: 4px;
 }
 
 .artists-txt h3 {
-  color: var(--color-red)
+  color: var(--color-red);
 }
 
 .soft-line {
@@ -293,7 +299,7 @@ footer {
 
 .h-v2 {
   justify-content: center !important;
-  text-align: center
+  text-align: center;
 }
 
 .about-container {
@@ -358,8 +364,9 @@ footer {
 }
 
 @media (min-width: 768px) {
-
-  .headline-titles, .headline-box, .headline-footer {
+  .headline-titles,
+  .headline-box,
+  .headline-footer {
     padding: 0 12%;
   }
 
@@ -386,7 +393,6 @@ footer {
 }
 
 @media (max-width: 767px) {
-
   header {
     display: none;
   }
@@ -440,7 +446,7 @@ footer {
   .nav-items ul li a {
     white-space: nowrap;
     text-decoration: none;
-    color: var(--color-gray)
+    color: var(--color-gray);
   }
 
   .right {

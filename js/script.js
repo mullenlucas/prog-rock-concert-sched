@@ -1,22 +1,22 @@
-import { dfschedule, dfartists } from "./datainfo.js"
+import { dfschedule, dfartists } from './datainfo.js';
 
 // Hamburger-menu setup
 const hambIcon = document.getElementById('hamburgerIcon');
 const closeIcon = document.getElementById('closeIcon');
-const menuItems = document.getElementById("items-menul");
+const menuItems = document.getElementById('items-menul');
 
 // Operation when SHOWING items
 const showItems = () => {
   hambIcon.style.display = 'none';
   closeIcon.style.display = 'block';
-  menuItems.classList.add('active')
+  menuItems.classList.add('active');
   menuItems.style.display = 'flex';
 };
 // Operation when HIDING items
 const hideItems = () => {
   closeIcon.style.display = 'none';
   hambIcon.style.display = 'block';
-  menuItems.classList.remove('active')
+  menuItems.classList.remove('active');
   menuItems.style.display = 'none';
 };
 
@@ -31,31 +31,31 @@ document.getElementById('menuHamburger').addEventListener('click', () => {
 });
 // Handling when an item from the menu is clicked
 menuItems.addEventListener('click', () => {
-  if (menuItems.style.display == 'flex') {
+  if (menuItems.style.display === 'flex') {
     hideItems();
   }
 });
 
-let current = window.location.pathname;
+const current = window.location.pathname;
 
-if (current == '/index.html' || current == '/') {
-const schedCards = document.getElementById("schedCards")
-let scheduleCardsHtml = ""
-dfschedule.forEach( (e) => {
-  scheduleCardsHtml += `
+if (current === '/index.html' || current === '/') {
+  const schedCards = document.getElementById('schedCards');
+  let scheduleCardsHtml = '';
+  dfschedule.forEach((e) => {
+    scheduleCardsHtml += `
   <div class="inner-card" id="${e.id}">
     <img src="${e.icon}">
     <h3>${e.title}</h3>
     <p>${e.text}</p>
   </div>
-  `
-})
-schedCards.innerHTML = scheduleCardsHtml
+  `;
+  });
+  schedCards.innerHTML = scheduleCardsHtml;
 
-const artistsCards = document.getElementById("artistsCards")
-let artistsCardsHtml = '';
-dfartists.forEach ( (art) => {
-  artistsCardsHtml += `
+  const artistsCards = document.getElementById('artistsCards');
+  let artistsCardsHtml = '';
+  dfartists.forEach((art) => {
+    artistsCardsHtml += `
   <div class="artists-card" id="${art.id}">
   <img src="${art.img}">
   <div class="artists-txt">
@@ -65,7 +65,7 @@ dfartists.forEach ( (art) => {
     <p>${art.desc}</p>
   </div>
 </div>
-  `
-})
-artistsCards.innerHTML = artistsCardsHtml
+  `;
+  });
+  artistsCards.innerHTML = artistsCardsHtml;
 }
