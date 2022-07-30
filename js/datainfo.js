@@ -9,7 +9,7 @@ export const dfschedule = [
     id: "sch2",
     icon: "./imgs/artist-icon.png",
     title: "Artists",
-    text: "The original artists"
+    text: "The original artists come back to their prime and perform their best at these amazing concerts"
   },
   {
     id: "sch3",
@@ -21,13 +21,13 @@ export const dfschedule = [
     id: "sch4",
     icon: "./imgs/event-icon.png",
     title: "Events",
-    text: "try"
+    text: "Aside from music, there are a lot of artistical expressions taking place at the festival, from circus, adventure games, virtual reality simulations and more!"
   },
   {
     id: "sch5",
     icon: "./imgs/merch-icon.png",
     title: "Merch",
-    text: "rhis"
+    text: "Original merch from the 70s is also ready at our marketplaces ripe for the picking!"
   }
 ]
 

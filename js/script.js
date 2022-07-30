@@ -38,7 +38,7 @@ menuItems.addEventListener('click', () => {
 
 let current = window.location.pathname;
 
-if (current == '/index.html') {
+if (current == '/index.html' || current == '/') {
 const schedCards = document.getElementById("schedCards")
 let scheduleCardsHtml = ""
 dfschedule.forEach( (e) => {

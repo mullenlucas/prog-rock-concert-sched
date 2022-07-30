@@ -45,7 +45,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 0 0 4vh 0 var(--color-gray);
+  box-shadow: 0 0 4vh 0 var(--color-dark);
   background-color: #fff;
 }
 
@@ -118,10 +118,10 @@ nav {
 .headline {
   background-image: url('/imgs/concert-2012.jpg');
   background-repeat: no-repeat;
-  background-color: rgba(241, 241, 241, 0.6);
+  background-color: rgba(241, 241, 241, 0.4);
   background-blend-mode: soft-light;
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   margin-top: 0.3%;
@@ -142,7 +142,16 @@ h1 {
 
 .headline-titles h1, .headline-footer h2 {
   font-family: var(--font-coco);
+}
+
+.headline-titles {
   text-shadow: 2px 2px var(--color-dark);
+}
+
+.headline-footer a {
+  text-decoration: none;
+  font-family: var(--font-lato);
+  font-weight: bold;
 }
 
 .container-title h2 {
@@ -158,10 +167,11 @@ h1 {
 }
 
 .headline-box p {
-  background-color: var(--color-four);
   border: 3px solid #fff;
   padding: 1rem;
   line-height: 1.5rem;
+  background-color: rgba(211, 211, 211, 0.3);
+  background-blend-mode: soft-light;
 }
 
 .schedule-container {
@@ -193,7 +203,6 @@ h1 {
   background-color: rgba(158, 158, 158, 0.12);
   align-items: center;
   padding: 12px;
-  height: 64vh;
 }
 
 .inner-card:hover {
@@ -208,7 +217,7 @@ h1 {
 }
 
 .inner-card h3 {
-  color: var(--color-red)
+  color: var(--color-red);
 }
 
 .inner-card p {
@@ -275,7 +284,6 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 6%;
-  /* margin-top: 6vh; */
   padding: 4%;
 }
 
@@ -297,6 +305,7 @@ footer {
   border-color: var(--color-gray);
   border-width: 0.4px;
   padding: 4% 0;
+  text-align: center;
 }
 
 .container-content {
@@ -309,6 +318,7 @@ footer {
   display: flex;
   gap: 42px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .inner-about-img {
@@ -361,6 +371,7 @@ footer {
 
   .inner-card {
     flex-direction: column;
+    height: 64vh;
   }
 
   .inner-card p {
@@ -415,11 +426,15 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 20px;
+    column-gap: 320px;
     padding-top: 15% !important;
     justify-content: flex-start;
     background-color: rgba(39, 42, 49, 0.9);
     width: 100%;
+  }
+
+  .ul-menu li {
+    display: flex;
   }
 
   .nav-items ul li a {
@@ -455,7 +470,7 @@ footer {
     padding: 1.5rem;
     gap: 24px;
     align-items: center;
-    height: 16vh;
+    min-height: 16vh;
   }
 
   .artists-card-container {
