@@ -16,10 +16,6 @@
 
 Click [this link](https://mullenlucas.github.io/prog-rock-concert-sched) to access the resulting website
 
-## Live Demo
-
-[This video showcases the resulting website](https://drive.google.com/file/d/1FXc8xvtc0G8wIA2cWcSN5pvCVFAfqozw/view?usp=sharing)
-
 ## Information
 
 **Work In Progress**
