@@ -14,7 +14,7 @@
 
 ## Website
 
-Soon.
+Click [this link](https://mullenlucas.github.io/prog-rock-concert-sched) to access the resulting website
 
 ## Information
 
