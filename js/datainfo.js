@@ -3,19 +3,19 @@ export const dfschedule = [
     id: "sch1",
     icon: "./imgs/headphone-icon.png",
     title: "Music",
-    text: "Sum"
+    text: "Relive the golden age of progressive rock music from the artists of their birthing era."
   },
   {
     id: "sch2",
     icon: "./imgs/artist-icon.png",
     title: "Artists",
-    text: "txt"
+    text: "The original artists"
   },
   {
     id: "sch3",
     icon: "./imgs/camping-icon.png",
     title: "Camping",
-    text: "2"
+    text: "As we chase the perfect latitude for a permanent spring, acampments take place to enjoy the nature of the land, accompanied by your favorite artists"
   },
   {
     id: "sch4",

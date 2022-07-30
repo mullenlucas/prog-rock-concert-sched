@@ -34,7 +34,7 @@ header a {
 
 header a p {
   font-family: var(--font-lato);
-  font-weight: 300;
+  font-weight: bold;
 }
 
 .header-icon {
@@ -116,16 +116,16 @@ nav {
 }
 
 .headline {
-  background-image: url('/imgs/woodstock.jpg');
+  background-image: url('/imgs/concert-2012.jpg');
   background-repeat: no-repeat;
-  background-color: rgba(241, 241, 241, 0.9);
+  background-color: rgba(241, 241, 241, 0.6);
   background-blend-mode: soft-light;
   background-position: center;
+  background-size: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  max-width: 100%;
-  margin-top: 0.5%;
+  margin-top: 0.3%;
+  padding: 6% 0;
 }
 
 .headline-titles {
@@ -136,8 +136,13 @@ h2, h3, h4, h5, p {
   font-family: var(--font-lato);
 }
 
+h1 {
+  font-size: 46px;
+}
+
 .headline-titles h1, .headline-footer h2 {
   font-family: var(--font-coco);
+  text-shadow: 2px 2px var(--color-dark);
 }
 
 .container-title h2 {
@@ -270,14 +275,77 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 6%;
-  margin-top: 6vh;
-  padding: 0 6%;
+  /* margin-top: 6vh; */
+  padding: 4%;
 }
 
 .footer-txt p {
   font-size: 12px;
 }
 
+.h-v2 {
+  justify-content: center !important;
+  text-align: center
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  border-style: solid none;
+  border-color: var(--color-gray);
+  border-width: 0.4px;
+  padding: 4% 0;
+}
+
+.container-content {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.about-imgs {
+  display: flex;
+  gap: 42px;
+  justify-content: center;
+}
+
+.inner-about-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  width: 340px;
+  height: 220px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: rgba(165, 0, 0, 0.9);
+  background-blend-mode: soft-light;
+  background-position: center;
+}
+
+.inner-about-img h2 {
+  font-weight: bold;
+  align-self: center;
+}
+
+#about-img-1 {
+  background-image: url(/imgs/concert-2012.jpg);
+}
+
+#about-img-2 {
+  background-image: url(/imgs/woodstock.jpg);
+}
+
+.about-footer {
+  background-color: var(--color-dark);
+}
+
+.about-footer-txt {
+  color: var(--color-gray);
+}
 
 @media (min-width: 768px) {
 
@@ -384,10 +452,10 @@ footer {
   }
 
   .inner-card {
-    background-color: rgba(158, 158, 158, 0.12);
     padding: 1.5rem;
     gap: 24px;
     align-items: center;
+    height: 16vh;
   }
 
   .artists-card-container {

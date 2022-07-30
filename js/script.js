@@ -3,7 +3,7 @@ import { dfschedule, dfartists } from "./datainfo.js"
 // Hamburger-menu setup
 const hambIcon = document.getElementById('hamburgerIcon');
 const closeIcon = document.getElementById('closeIcon');
-const menuItems = document.querySelector('.nav-items');
+const menuItems = document.getElementById("items-menul");
 
 // Operation when SHOWING items
 const showItems = () => {
@@ -30,12 +30,15 @@ document.getElementById('menuHamburger').addEventListener('click', () => {
   }
 });
 // Handling when an item from the menu is clicked
-document.querySelector('.menuItem').addEventListener('click', () => {
-  if (closeIcon.style.display === 'block') {
+menuItems.addEventListener('click', () => {
+  if (menuItems.style.display == 'flex') {
     hideItems();
   }
 });
 
+let current = window.location.pathname;
+
+if (current == '/index.html') {
 const schedCards = document.getElementById("schedCards")
 let scheduleCardsHtml = ""
 dfschedule.forEach( (e) => {
@@ -65,3 +68,4 @@ dfartists.forEach ( (art) => {
   `
 })
 artistsCards.innerHTML = artistsCardsHtml
+}
