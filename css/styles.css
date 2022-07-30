@@ -128,9 +128,7 @@ nav {
 }
 
 #sched-buy {
-  color: var(--color-gray);
   font-family: var(--font-lato);
-  text-decoration: underline;
 }
 
 .right {
@@ -140,7 +138,7 @@ nav {
 .headline {
   background-image: url('/imgs/concert-2012.jpg');
   background-repeat: no-repeat;
-  background-color: rgba(241, 241, 241, 0.4);
+  background-color: rgba(241, 241, 241, 0.7);
   background-blend-mode: soft-light;
   background-position: center;
   background-size: cover;
@@ -152,12 +150,19 @@ nav {
 
 .headline-titles {
   color: var(--color-red);
-  text-shadow: 2px 2px var(--color-dark);
 }
 
 .headline-titles h1,
 .headline-footer h2 {
   font-family: var(--font-coco);
+}
+
+.headline-titles h1 {
+  text-shadow: 2px 2px var(--color-dark);
+}
+
+.headline-titles h3 {
+  text-shadow: 1px 1px var(--color-dark);
 }
 
 .container-title h2 {
@@ -376,6 +381,12 @@ footer {
     justify-content: center;
   }
 
+  #sched-buy {
+    text-decoration: underline;
+    color: var(--color-gray);
+    text-transform: uppercase;
+  }
+
   .inner-card {
     flex-direction: column;
     height: 64vh;
@@ -470,6 +481,13 @@ footer {
     row-gap: 12px;
     align-items: center;
     margin: 0 24px;
+  }
+
+  #sched-buy {
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--color-red);
+    padding: 24px;
   }
 
   .inner-card {

@@ -36,6 +36,23 @@ menuItems.addEventListener('click', () => {
   }
 });
 
+/* When changing screen-size after closing the hamburger menu
+(therefore, hiding the "menuItems" list)
+so the items remain hidden on desktop.
+This shouldn't really be a problem since users wouldn't be browsing from one screen size to another,
+in the same session,
+but just to make the code function properly in such unrealistic scenarios, this fix is added */
+
+const x = window.matchMedia('(min-width: 768px)');
+
+x.onchange = (e) => {
+  if (e.matches) {
+    menuItems.style.display = 'flex';
+  } else {
+    menuItems.style.display = 'none';
+  }
+};
+
 const current = window.location.pathname;
 
 if (current === '/index.html' || current === '/') {
